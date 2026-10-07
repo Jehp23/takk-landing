@@ -1,0 +1,20 @@
+{
+  "name": "takk",
+  "version": "1.0.0",
+  "description": "A responsive static landing for a two-minute competitive keep-away game.",
+  "scripts": {
+    "build": "node -e \"const fs=require('node:fs');for(const f of fs.readdirSync('dist'))if(/^gpu-[A-Z0-9]+\\.js$/.test(f))fs.unlinkSync('dist/'+f)\" && esbuild src/motion.js --bundle --format=esm --splitting --outdir=dist --loader:.wgsl=text --minify",
+    "check": "node --check dist/app.js && node --check src/motion.js && node --check src/gpu.js && vgpu check src/energy.wgsl && vgpu check src/rush.wgsl"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "vgpu": "^0.5.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "private": true
+}

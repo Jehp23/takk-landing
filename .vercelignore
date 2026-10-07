@@ -1,0 +1,7 @@
+node_modules/
+.vercel/
+work/
+*.zip
+*.log
+README.md
+.DS_Store

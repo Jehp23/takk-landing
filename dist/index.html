@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#09090b">
+  <meta name="description" content="Two minutes. One Core. Everybody wants it. TAKK is a fast competitive party game. Take it. Keep it. HODL it.">
+  <title>TAKK — TAKE IT. KEEP IT. HODL IT.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+  <script src="motion.js" type="module"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="TAKK home">TAKK</a>
+    <nav aria-label="Main navigation">
+      <a href="#how">The game</a>
+      <a href="#arenas">Arenas</a>
+      <a href="#passport">Passport <span class="tiny-dot"></span></a>
+    </nav>
+    <div class="header-controls"><button class="motion-toggle" id="motion-toggle" aria-pressed="false">Motion off</button><button class="header-play" data-play><span class="desktop-entry">Enter arena</span><span class="mobile-entry">Play</span></button></div>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero-art" src="assets/arena-hero.png" alt="A luminous low-poly arena with magenta, violet and cyan architecture surrounding the Core" width="1672" height="941" fetchpriority="high">
+      <canvas class="hero-energy" aria-hidden="true"></canvas>
+      <div class="hero-topline"><span><i></i> A QUICK PARTY GAME FOR HACKERS.</span><span>02:00 / PURE CHAOS</span></div>
+      <div class="hero-body">
+        <div class="hero-copy">
+<svg class="wordmark" viewBox="0 0 1000 216" role="img" aria-label="TAKK">
+        <defs><linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff00b8"/><stop offset=".48" stop-color="#7b2cff"/><stop offset="1" stop-color="#00eaff"/></linearGradient></defs>
+        <path fill="currentColor" d="M0 0H233V54H149V216H83V54H0Z M251 216L309 0H390L449 216H382L373 173H326L316 216Z M338 119H362L350 60Z" fill-rule="evenodd"/>
+        <path fill="currentColor" d="M475 0H541V83L615 0H695L607 100L699 216H618L541 119V216H475Z M721 0H787V83L861 0H941L853 100L945 216H864L787 119V216H721Z"/>
+        <path fill="url(#brand-gradient)" d="M541 83L615 0H695L607 100Z M787 83L861 0H941L853 100Z"/>
+        <path fill="currentColor" d="M963 3H978V8H973V21H968V8H963Z M981 3H986L990 10L994 3H999V21H994V11L990 17L986 11V21H981Z"/>
+      </svg>
+          <p class="eyebrow">ONE CORE. ZERO PERSONAL SPACE.</p>
+          <h1 id="hero-title">TAKE IT.<br>KEEP IT.<br><span>HODL IT.</span></h1>
+          <p class="hero-description">Two minutes. One Core. Everybody wants it.<br>Run, steal, and hold on for your life.</p>
+          <div class="hero-actions"><button class="button primary" data-play>LET’S PLAY</button><a class="text-link" href="#how">How it works</a></div>
+          <p class="entry-note">No wallet required to explore. Just bring a nickname.</p>
+        </div>
+        <div class="arena-caption"><span class="caption-index">001</span><div><span>ARENA CONCEPT</span><strong>SMALL WORLD.<br>BIG RIVALRIES.</strong></div><span class="caption-cross" aria-hidden="true">+</span></div>
+      </div>
+      <div class="hero-bottom"><span>FAST ROUNDS. LONG GRUDGES.</span><a href="#how">GET THE RULES</a><span>TAKK / EXPERIMENT 001</span></div>
+    </section>
+    <div class="ticker" aria-hidden="true"><div>TAKE IT. KEEP IT. HODL IT. <span>✳</span> FRIENDS BECOME TARGETS. <span>✳</span> TAKE IT. KEEP IT. HODL IT. <span>✳</span> FRIENDS BECOME TARGETS. <span>✳</span></div></div>
+    <section class="rules section" id="how" aria-labelledby="rules-title">
+      <div class="rush-heading"><p class="eyebrow">01 / THE GAME — CORE RUSH</p><h2 id="rules-title">EVERYBODY<br>WANTS<br><span>YOUR CORE.</span></h2><p>Being the main character has consequences.<br>Two minutes. Keep moving. Trust nobody.</p></div>
+      <div class="rush-stage" data-carrier="cyan" data-steals="0">
+        <img class="rush-backdrop" src="assets/arena-hero.png" alt="" width="1672" height="941" loading="lazy">
+        <div class="rush-fallback" aria-hidden="true"><img src="assets/core.png" alt="" width="1536" height="1024"><span class="fallback-ring"></span></div>
+        <canvas class="rush-energy" aria-hidden="true"></canvas>
+        <div class="rush-stage-top"><span>CORE RUSH / INTERACTIVE CONCEPT</span><span class="rush-target">TARGET ACQUIRED</span></div>
+        <span class="rush-annotation" aria-hidden="true">ONE OBJECT.<br>EVERYONE’S PROBLEM.</span>
+        <div class="rush-controls"><div><span class="rush-carrier">CARRIER / CYAN</span><p id="rush-status" aria-live="polite">Cyan has the Core. Everybody else wants it.</p></div><button class="steal-button" id="steal-core" type="button">STEAL THE CORE <span aria-hidden="true">↗</span></button></div>
+      </div>
+      <div class="gameplay-rail"><p><span>01 / JOIN</span>Pick a nickname.<br>Jump into the arena.</p><p><span>02 / TAKE</span>Chase the carrier.<br>Steal the spotlight.</p><p><span>03 / HOLD</span>Keep the Core the longest.<br>Win the two-minute round.</p><button class="text-link" data-play>YOUR TURN ↗</button></div>
+    </section>
+    <section class="arenas section" id="arenas" aria-labelledby="arena-title">
+      <div class="section-heading"><p class="eyebrow">02 / WORLD BUILDING</p><h2 id="arena-title">SAME GAME.<br><span>DIFFERENT CITIES.</span></h2><p>Local landmarks.<br>Universal chaos.</p></div>
+      <div class="arena-feature">
+        <img src="assets/buenos-aires-arena.png" alt="Buenos Aires arena concept with an illuminated geometric Obelisk, connected platforms and colorful floating architecture" width="1536" height="1024" loading="lazy">
+        <div class="arena-feature-top"><h3>BUENOS AIRES</h3><span class="pill">ARENA CONCEPT</span></div>
+        <div class="arena-feature-bottom"><p>A city reimagined as your next playground.</p><span>BA / 001</span></div>
+      </div>
+      <div class="city-strip"><span class="eyebrow">MORE WORLDS TO IMAGINE</span><div><span>NEW YORK</span><span>HANGZHOU</span><span>SAN FRANCISCO</span><span>LONDON</span><span>SHENZHEN</span><span>SINGAPORE</span></div></div>
+    </section>
+    <section class="passport section" id="passport" aria-labelledby="passport-title">
+      <div class="passport-copy"><p class="eyebrow">03 / BEYOND THE ARENA <span class="pill">COMING NEXT</span></p><h2 id="passport-title">A SHORT GAME.<br>A LONG <span>REPUTATION.</span></h2><p>The match ends. Your story keeps going.<br>A TAKK Passport for your wins, your rivalries,<br>and every city you’ve left your mark on.</p><div class="passport-tags"><span>MATCH HISTORY</span><span>CITY STAMPS</span><span>ACHIEVEMENTS</span></div><p class="monad-note"><span aria-hidden="true">◇</span> Built with Monad in mind. Integration coming next.</p></div>
+      <div class="passport-card" aria-label="Illustrative TAKK Passport preview, coming soon"><div class="card-top"><span>TAKK / PASSPORT</span><span>001</span></div><div class="passport-art"><img src="assets/core.png" alt="" width="1536" height="1024" loading="lazy"><span>YOUR NEXT<br>MAIN CHARACTER<br>MOMENT.</span></div><div class="passport-name">YOUR NAME.<br>YOUR REPUTATION.</div><div class="passport-line"></div><div class="card-bottom"><span>IDENTITY / IN PROGRESS</span><span>✳</span></div></div>
+    </section>
+    <section class="closing section" aria-labelledby="closing-title"><p class="eyebrow">THE NEXT TWO MINUTES ARE YOURS.</p><h2 id="closing-title">THINK YOU<br>CAN <span>KEEP IT?</span></h2><button class="button primary" data-play>ENTER THE ARENA</button><p>Try the current prototype. Core Rush is the next round.</p><div class="closing-coordinate" aria-hidden="true">TAKK / NEXT ROUND</div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#" aria-label="TAKK home">TAKK</a><span>SMALL GAME. BIG MAIN CHARACTER ENERGY.</span><a href="#main">BACK TO TOP</a></footer>
+  <dialog id="entry-dialog" aria-labelledby="entry-title">
+    <button class="dialog-close" aria-label="Close player setup">×</button>
+    <p class="eyebrow">PLAYER SETUP / LOCAL</p><h2 id="entry-title">MAKE AN<br><span>ENTRANCE.</span></h2>
+    <form id="entry-form"><label for="nickname">Your nickname</label><input id="nickname" name="nickname" autocomplete="nickname" maxlength="20" minlength="2" placeholder="CORE_THIEF" required aria-describedby="nickname-hint nickname-error"><p id="nickname-hint" class="form-hint">2–20 characters. Letters, numbers, spaces, _ or -.</p><p id="nickname-error" class="form-error" aria-live="polite"></p>
+      <fieldset><legend>Choose your color</legend><div class="color-options"><label style="--swatch:#bdff00"><input type="radio" name="color" value="lime" checked><span>Lime</span></label><label style="--swatch:#a374ff"><input type="radio" name="color" value="violet"><span>Violet</span></label><label style="--swatch:#00eaff"><input type="radio" name="color" value="cyan"><span>Cyan</span></label><label style="--swatch:#ff00b8"><input type="radio" name="color" value="pink"><span>Pink</span></label></div></fieldset>
+      <button class="button primary" type="submit">READY UP</button><p class="form-hint">This prepares your identity on this device.</p>
+    </form>
+    <div id="player-ready" hidden><div class="ready-avatar" aria-hidden="true">T</div><h3 id="ready-name"></h3><p>Ready to try the current build?</p><div class="ready-notice"><span class="tiny-dot"></span> CURRENT BUILD / PROTOTYPE<p>Your nickname and color stay on this device. The game currently assigns its own player identity.</p></div><a class="button primary game-launch" id="open-game" href="https://tekk-1.onrender.com/" target="_blank" rel="noopener noreferrer" aria-describedby="game-launch-hint">OPEN GAME ↗</a><p class="form-hint" id="game-launch-hint">Opens in a new tab. This prototype is a race; Core Rush is still in development.</p><button class="button secondary" id="edit-player">Edit player</button></div>
+  </dialog>
+</body>
+</html>
